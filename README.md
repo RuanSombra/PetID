@@ -1,31 +1,26 @@
 # 🐾 Identificador de Raças de Pets (Deep Learning)
 
-Este projeto é uma aplicação de Inteligência Artificial capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. Além da classificação, o sistema fornece informações úteis sobre o temperamento e os cuidados necessários para a raça detectada.
-
-O projeto foi desenvolvido utilizando **Transfer Learning** com a arquitetura **MobileNetV2** e otimizado com **TensorFlow Lite** para inferência rápida e leve.
+Este projeto é uma aplicação de Inteligência Artificial capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. O sistema utiliza uma Rede Neural Convolucional (MobileNetV2) treinada via Transfer Learning para classificar os animais e fornece dicas de cuidados e temperamento.
 
 ## 📋 Funcionalidades
 
-* **Identificação de Raças:** Classifica imagens entre 37 raças populares do *Oxford-IIIT Pet Dataset*.
-* **Informações de Cuidado:** Exibe dicas de manejo, temperamento e saúde específicas para cada animal.
-* **Suporte Multi-formato:** Aceita upload de imagens `.JPG`, `.PNG`, `.WEBP`, `.BMP`, `.TIFF` e `.JFIF`.
-* **Interface Web:** Interface amigável construída com Streamlit.
-* **Otimização Mobile:** Backend otimizado com TensorFlow Lite (`.tflite`).
+* **Classificação de Raças:** Identifica 37 raças específicas (ex: Persa, Beagle, Pug, etc.).
+* **Ficha Técnica:** Exibe informações sobre o comportamento e necessidades do animal.
+* **Interface Web:** Aplicação interativa desenvolvida com **Streamlit**.
+* **Flexibilidade:** Pode ser executado na nuvem (Google Colab) ou localmente.
 
 ---
 
-## 🛠 Tecnologias Utilizadas
+## 🛠 Tecnologias
 
 * **Linguagem:** Python 3.x
-* **Machine Learning:** TensorFlow, Keras
-* **Modelo Base:** MobileNetV2 (ImageNet weights)
+* **IA/ML:** TensorFlow, Keras, TensorFlow Lite
 * **Interface:** Streamlit
-* **Processamento de Imagem:** OpenCV, PIL (Pillow)
-* **Acesso Remoto (Colab):** PyNgrok
+* **Utils:** OpenCV, PIL, NumPy
 
 ---
 
-## 📊 Dataset e Raças Suportadas
+## 🐶 Raças Suportadas
 
 O modelo foi treinado no **Oxford-IIIT Pet Dataset**.
 
@@ -37,27 +32,77 @@ American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihua
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🚀 Como Rodar o Projeto
 
-Você pode rodar este projeto de duas formas: na nuvem (Google Colab) ou localmente no seu computador.
+Escolha a opção que preferir:
 
-### Opção 1: Rodar no Google Colab (Sem instalação local)
-Esta é a forma mais fácil se você não quiser configurar Python no seu PC.
+### Opção 1: Google Colab 
+Ideal para testar rápido sem configurar nada no computador.
 
 1.  Baixe o arquivo `.ipynb` deste repositório.
-2.  Acesse o [Google Colab](https://colab.research.google.com/) e faça o upload do notebook.
-3.  No menu superior, clique em **Ambiente de Execução** > **Executar tudo**.
-    * *Nota: O download do dataset e treinamento pode levar alguns minutos na primeira vez.*
-4.  **Atenção ao Ngrok:** Na última célula do código, insira seu Authtoken gratuito do Ngrok (obtido em [dashboard.ngrok.com](https://dashboard.ngrok.com)) para gerar o link de acesso.
-5.  Clique no link gerado (`xxxx.ngrok-free.app`) para abrir o App.
+2.  Abra no [Google Colab](https://colab.research.google.com/) e faça upload do arquivo.
+3.  Vá em **Ambiente de Execução** > **Executar tudo**.
+4.  **Importante:** Na última célula do código, cole seu token gratuito do Ngrok (pegue em [dashboard.ngrok.com](https://dashboard.ngrok.com)).
+5.  Clique no link gerado (`xxxx.ngrok-free.app`) para usar.
 
-### Opção 2: Rodar Localmente (Windows/Linux/Mac)
-Para rodar direto no seu computador:
+**Você pode utilizar o meu token para rodar a aplicação que já está no projeto, mas queira pode substituir.**
 
-**1. Clone o repositório ou baixe os arquivos:**
-Certifique-se de ter os arquivos `app.py`, `modelo_racas_pro.tflite` e `requirements.txt` na mesma pasta.
+---
 
-**2. Instale as dependências:**
-Abra o terminal na pasta do projeto e execute:
-```bash
-pip install -r requirements.txt
+### Opção 2: VS Code 
+Ideal para desenvolvimento e uso offline.
+
+**Pré-requisitos:**
+* Python instalado (3.8 ou superior).
+* Git instalado.
+
+**Passo a Passo:**
+
+1.  **Clone o repositório:**
+    Abra o terminal e digite:
+    ```bash
+    git clone https://github.com/RuanSombra/PetID.git
+    cd PetID
+    ```
+
+2.  **Crie um ambiente virtual (Recomendado):**
+    * *Windows:*
+      ```bash
+      python -m venv venv
+      .\venv\Scripts\activate
+      ```
+    * *Mac/Linux:*
+      ```bash
+      python3 -m venv venv
+      source venv/bin/activate
+      ```
+
+3.  **Instale as dependências:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+    > **Dica:** Aguarde terminar todas as instalações para prosseguir com o próximo passo.
+
+4.  **Execute o App:**
+    ```bash
+    streamlit run app.py
+    ```
+
+    > **Dica:** Se aparecer uma pergunta sobre "Email" no terminal, apenas aperte **ENTER** para pular. O navegador abrirá automaticamente em `http://localhost:8501`.
+
+---
+
+## ⚠️ Solução de Problemas Comuns
+
+* **Erro "Dimension Mismatch (Expected 160 but got 224)":**
+    * Verifique se a variável `IMG_SIZE_APP` no arquivo `app.py` é igual a **160**.
+
+* **Aviso "Update pip" (Texto amarelo):**
+    * Se aparecer um aviso amarelo pedindo para atualizar o pip, você pode ignorar. O projeto roda bem na versão atual.
+
+* **Erro ao abrir imagem:**
+    * O App aceita JPG, PNG, WEBP, BMP, TIFF e JFIF. Se der erro, tente converter a imagem para JPG padrão.
+
+---
+
+## Autor: Desenvolvido por Ruan Pactrick de Sousa e Sousa
