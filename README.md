@@ -41,7 +41,9 @@ Deixei o site hospedado só no ponto de testar a aplicação:
 
 Link: https://pet-identificador-de-racas.streamlit.app/
 
-**Lembre-se que o modelo foi treinado com 37 raças, deixei disponibilizado no repositório algumas fotos de gatos e cachorros caso queira testar**
+> **Dica:** Lembre-se que o modelo foi treinado com 37 raças, deixei disponibilizado no repositório algumas fotos de gatos e cachorros caso queira testar.
+
+****
 
 ### Opção 2: Google Colab 
 Ideal para testar rápido sem configurar nada no computador.
