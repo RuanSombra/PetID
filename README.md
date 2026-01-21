@@ -71,7 +71,6 @@ Ideal para desenvolvimento e uso offline.
     * *Windows:*
       ```bash
       python -m venv venv
-      .\venv\Scripts\activate
       ```
       ```bash
       .\venv\Scripts\activate
@@ -79,7 +78,6 @@ Ideal para desenvolvimento e uso offline.
     * *Mac/Linux:*
       ```bash
       python3 -m venv venv
-      source venv/bin/activate
       ```
       ```bash
       source venv/bin/activate
