@@ -2,8 +2,6 @@
 
 Este projeto é uma aplicação capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. O sistema utiliza uma Rede Neural Convolucional (MobileNetV2) treinada via Transfer Learning e Fine-Tuning para classificar os animais e fornece dicas de cuidados e temperamento.
 
----
-
 ## 📋 Funcionalidades
 
 * **Classificação de Raças:** Identifica 37 raças específicas (ex: Persa, Beagle, Pug, etc.).
@@ -11,16 +9,12 @@ Este projeto é uma aplicação capaz de identificar **37 raças de cães e gato
 * **Interface Web:** Aplicação interativa desenvolvida com **Streamlit**.
 * **Flexibilidade:** Pode ser executado na nuvem (Google Colab) ou localmente.
 
----
-
 ## 🛠 Tecnologias
 
 * **Linguagem:** Python 3.x
 * **IA/ML:** TensorFlow, Keras, TensorFlow Lite
 * **Interface:** Streamlit
 * **Utils:** OpenCV, PIL, NumPy
-
----
 
 ## 🐶 Raças Suportadas
 
@@ -31,8 +25,6 @@ Abyssinian, Bengal, Birman, Bombay, British Shorthair, Egyptian Mau, Maine Coon,
 
 **Cachorros:**
 American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihuahua, English Cocker Spaniel, English Setter, German Shorthaired, Great Pyrenees, Havanese, Japanese Chin, Keeshond, Leonberger, Miniature Pinscher, Newfoundland, Pomeranian, Pug, Saint Bernard, Samoyed, Scottish Terrier, Shiba Inu, Staffordshire Bull Terrier, Wheaten Terrier, Yorkshire Terrier.
-
----
 
 ## ℹ️ Informações sobre o Notebook
 
@@ -52,8 +44,6 @@ O arquivo `Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb` pos
 * **Nota:** O **Tópico 5** (Teste isolado no Colab) está comentado para não interromper a execução automática ("Run All").
 
 > **OBS:** O projeto foca na segunda estrutura. O código extra foi mantido para fins de documentação e estudo.
-
----
 
 ## 🚀 Como Rodar o Projeto
 
@@ -90,8 +80,6 @@ Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolh
 
 > **Importante:** Já tem configurado o meu token então mude se preferir.
 
----
-
 ### **Método 2: Execução Rápida (Apenas app.py):**
 
 - Nesta opção, você cria um ambiente limpo apenas para rodar a interface, sem passar pelos códigos de treinamento.
@@ -122,7 +110,7 @@ Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolh
     - O código vai exibir um IP (ex: 34.123...) e um link (your url is: ...).
 
     - Clique no link, cole o IP na caixa "Tunnel Password" e clique em Submit.
-
+   
 ---
 
 ### Opção 3: VS Code 
@@ -172,8 +160,6 @@ Ideal para desenvolvimento e uso offline.
 
     > **Dica:** Se aparecer uma pergunta sobre "Email" no terminal, apenas aperte **ENTER** para pular. O navegador abrirá automaticamente em `http://localhost:8501`.
 
----
-
 ## ⚠️ Solução de Problemas Comuns
 
 * **Erro "Dimension Mismatch (Expected 160 but got 224)":**
@@ -184,7 +170,5 @@ Ideal para desenvolvimento e uso offline.
 
 * **Erro ao abrir imagem:**
     * O App aceita JPG, PNG, WEBP, BMP, TIFF e JFIF. Se der erro, tente converter a imagem para JPG padrão.
-
----
 
 ## Autor: Desenvolvido por Ruan Pactrick de Sousa e Sousa
