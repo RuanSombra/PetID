@@ -36,7 +36,13 @@ American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihua
 
 Escolha a opção que preferir:
 
-### Opção 1: Google Colab 
+### Opção 1: Site Hospedado
+Deixei o site hospedado só no ponto de testar a aplicação:
+
+Link: https://pet-identificador-de-racas.streamlit.app/
+**Lembre-se que o modelo foi treinado com 37 raças, deixei disponibilizado no repositório algumas fotos de gatos e cachorros caso queira testar**
+
+### Opção 2: Google Colab 
 Ideal para testar rápido sem configurar nada no computador.
 
 1.  Baixe o arquivo `.ipynb` deste repositório.
@@ -49,7 +55,7 @@ Ideal para testar rápido sem configurar nada no computador.
 
 ---
 
-### Opção 2: VS Code 
+### Opção 3: VS Code 
 Ideal para desenvolvimento e uso offline.
 
 **Pré-requisitos:**
