@@ -61,9 +61,6 @@ Link: https://pet-identificador-de-racas.streamlit.app/
 ### Opção 2: Google Colab 
 Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolha o método que preferir:
 
-
-### **Método 1: Notebook Completo:**
-
 - Nesta opção, você roda o arquivo .ipynb original, visualizando todo o processo de código (carregamento de dados, treinamento) até chegar na aplicação.
 
 - Baixe o arquivo **Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb** deste repositório.
@@ -79,39 +76,6 @@ Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolh
 **Nota:** Se o código pedir um token do Ngrok, você pode criar uma conta gratuita em ngrok.com e colar seu token.
 
 > **Importante:** Já tem configurado o meu token então mude se preferir.
-
-### **Método 2: Execução Rápida (Apenas app.py):**
-
-- Nesta opção, você cria um ambiente limpo apenas para rodar a interface, sem passar pelos códigos de treinamento.
-
-- Abra um novo notebook em branco no Google Colab.
-
-- Na aba de arquivos (ícone de pasta à esquerda), faça o upload do arquivo app.py que está neste repositório.
-
-- **Copie e cole o código abaixo em uma célula e execute:**
-
-  ### Instala as dependências e o criador de túnel
-
-  ```bash
-  !pip install streamlit tensorflow pillow
-  ``` 
-  ```bash
-  !npm install localtunnel
-  ``` 
-
-  ### Roda a aplicação em segundo plano e gera o link de acesso
-  ```bash
-  import urllib
-  print("Senha para o túnel:", urllib.request.urlopen('https://ipv4.icanhazip.com').read().decode('utf8').strip("\n"))
-  !streamlit run app.py &> /content/logs.txt & npx localtunnel --port 8501
-  ``` 
-  - **Como acessar:**
-
-    - O código vai exibir um IP (ex: 34.123...) e um link (your url is: ...).
-
-    - Clique no link, cole o IP na caixa "Tunnel Password" e clique em Submit.
-   
----
 
 ### Opção 3: VS Code 
 Ideal para desenvolvimento e uso offline.
