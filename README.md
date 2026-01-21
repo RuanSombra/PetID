@@ -1,6 +1,8 @@
 # 🐾 Identificador de Raças de Pets 
 
-Este projeto é uma aplicação capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. O sistema utiliza uma Rede Neural Convolucional (MobileNetV2) treinada via Transfer Learning e Fine Turning para classificar os animais e fornece dicas de cuidados e temperamento.
+Este projeto é uma aplicação capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. O sistema utiliza uma Rede Neural Convolucional (MobileNetV2) treinada via Transfer Learning e Fine-Tuning para classificar os animais e fornece dicas de cuidados e temperamento.
+
+---
 
 ## 📋 Funcionalidades
 
@@ -29,6 +31,25 @@ Abyssinian, Bengal, Birman, Bombay, British Shorthair, Egyptian Mau, Maine Coon,
 
 **Cachorros:**
 American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihuahua, English Cocker Spaniel, English Setter, German Shorthaired, Great Pyrenees, Havanese, Japanese Chin, Keeshond, Leonberger, Miniature Pinscher, Newfoundland, Pomeranian, Pug, Saint Bernard, Samoyed, Scottish Terrier, Shiba Inu, Staffordshire Bull Terrier, Wheaten Terrier, Yorkshire Terrier.
+
+---
+
+## Informações sobre o app.py
+
+O **app.py** possui duas estruturas:
+
+**Tópicos 1 e 2:** O treinamento para identificar se é cachorro ou gato com o Dataset **"CatVSDog"**.
+  
+- **Nota:** O código referente à primeira estrutura mencionada está comentado por padrão. Para testá-lo, basta remover os comentários.
+- **Aviso Importante:** A execução deste trecho depende do download automático do dataset através de um link externo (Microsoft). Caso o servidor de origem esteja instável ou o link tenha sido alterado, o download falhará e a aplicação não rodará.
+  
+**Tópicos 3 até 6.3:** O treinamento para identificação de raças de gatos e cachorros utilizou a arquitetura **MobileNetV2**. Aplicamos **Transfer Learning** para aproveitar o conhecimento prévio da rede e realizamos o **Fine-Tuning** utilizando o dataset **Oxford-IIIT Pet**. Esse processo ajustou a **rede neural** para reconhecer características visuais **específicas** e **detalhadas** (como formato da orelha e textura da pelagem), garantindo alta precisão na classificação das raças.
+- **Nota sobre o Tópico 5:** Este trecho de código foi mantido comentado por padrão para não interromper o fluxo de execução automática ("Run All") do notebook. Ele serve para testes isolados da aplicação dentro do ambiente Google Colab. Para utilizá-lo, basta descomentar as linhas.
+- **Aviso Importante:** A execução deste trecho depende do download automático do dataset através de um link externo (Microsoft). Caso o servidor de origem esteja instável ou o link tenha sido alterado, o download falhará e a aplicação não rodará.
+
+**OBS:** Utilizaremos para o projeto apenas a segunda estrutura, por isso, caso dê uma olhada no app.py verá alguns códigos comentados para que não impeça a execução do código quando for utilizado o **"Executar Tudo"**.
+
+> As informações acima são apenas para conhecimento de como está estruturado o projeto.
 
 ---
 
