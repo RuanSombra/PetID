@@ -1,4 +1,4 @@
-# 🐾 Identificador de Raças de Pets (Deep Learning)
+# 🐾 Identificador de Raças de Pets 
 
 Este projeto é uma aplicação de Inteligência Artificial capaz de identificar **37 raças de cães e gatos** a partir de uma imagem. O sistema utiliza uma Rede Neural Convolucional (MobileNetV2) treinada via Transfer Learning para classificar os animais e fornece dicas de cuidados e temperamento.
 
