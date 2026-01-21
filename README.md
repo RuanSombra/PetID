@@ -62,6 +62,8 @@ Ideal para desenvolvimento e uso offline.
     Abra o terminal e digite:
     ```bash
     git clone https://github.com/RuanSombra/PetID.git
+    ```
+    ```bash
     cd PetID
     ```
 
@@ -71,9 +73,15 @@ Ideal para desenvolvimento e uso offline.
       python -m venv venv
       .\venv\Scripts\activate
       ```
+      ```bash
+      .\venv\Scripts\activate
+      ```
     * *Mac/Linux:*
       ```bash
       python3 -m venv venv
+      source venv/bin/activate
+      ```
+      ```bash
       source venv/bin/activate
       ```
 
