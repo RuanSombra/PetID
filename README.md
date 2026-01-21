@@ -83,7 +83,7 @@ Ideal para testar rápido sem configurar nada no computador.
 Ideal para desenvolvimento e uso offline.
 
 **Pré-requisitos:**
-* Python instalado (3.8 ou superior).
+* Python instalado recomendo versão 3.12.
 * Git instalado.
 
 **Passo a Passo:**
