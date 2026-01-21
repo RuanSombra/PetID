@@ -34,22 +34,24 @@ American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihua
 
 ---
 
-## Informações sobre o app.py
+## ℹ️ Informações sobre o Notebook
 
-O **app.py** possui duas estruturas:
+O arquivo `Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb` possui duas estruturas principais:
 
-**Tópicos 1 e 2:** O treinamento para identificar se é cachorro ou gato com o Dataset **"CatVSDog"**.
-  
-- **Nota:** O código referente à primeira estrutura mencionada está comentado por padrão. Para testá-lo, basta remover os comentários.
-- **Aviso Importante:** A execução deste trecho depende do download automático do dataset através de um link externo (Microsoft). Caso o servidor de origem esteja instável ou o link tenha sido alterado, o download falhará e a aplicação não rodará.
-  
-**Tópicos 3 até 6.3:** O treinamento para identificação de raças de gatos e cachorros utilizou a arquitetura **MobileNetV2**. Aplicamos **Transfer Learning** para aproveitar o conhecimento prévio da rede e realizamos o **Fine-Tuning** utilizando o dataset **Oxford-IIIT Pet**. Esse processo ajustou a **rede neural** para reconhecer características visuais **específicas** e **detalhadas** (como formato da orelha e textura da pelagem), garantindo alta precisão na classificação das raças.
-- **Nota sobre o Tópico 5:** Este trecho de código foi mantido comentado por padrão para não interromper o fluxo de execução automática ("Run All") do notebook. Ele serve para testes isolados da aplicação dentro do ambiente Google Colab. Para utilizá-lo, basta descomentar as linhas.
-- **Aviso Importante:** A execução deste trecho depende do download automático do dataset através de um link externo (Microsoft). Caso o servidor de origem esteja instável ou o link tenha sido alterado, o download falhará e a aplicação não rodará.
+### 1. Classificação Binária (Gato vs Cachorro)
+* **Localização:** Tópicos 1 e 2.
+* **Dataset:** "CatVSDog".
+* **Estado Atual:** Comentado por padrão.
+* **Nota:** Para testar, remova os comentários. A execução depende do download automático de um dataset externo (Microsoft).
 
-**OBS:** Utilizaremos para o projeto apenas a segunda estrutura, por isso, caso dê uma olhada no app.py verá alguns códigos comentados para que não impeça a execução do código quando for utilizado o **"Executar Tudo"**.
+### 2. Classificação de Raças (MobileNetV2)
+* **Localização:** Tópicos 3 até 6.3.
+* **Técnica:** Transfer Learning e Fine-Tuning no dataset **Oxford-IIIT Pet**.
+* **Objetivo:** Reconhecer características visuais detalhadas (orelha, pelagem) para alta precisão.
+* **Estado Atual:** Ativo (código principal do projeto).
+* **Nota:** O **Tópico 5** (Teste isolado no Colab) está comentado para não interromper a execução automática ("Run All").
 
-> As informações acima são apenas para conhecimento de como está estruturado o projeto.
+> **OBS:** O projeto foca na segunda estrutura. O código extra foi mantido para fins de documentação e estudo.
 
 ---
 
@@ -67,15 +69,59 @@ Link: https://pet-identificador-de-racas.streamlit.app/
 ****
 
 ### Opção 2: Google Colab 
-Ideal para testar rápido sem configurar nada no computador.
+Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolha o método que preferir:
 
-1.  Baixe o arquivo `.ipynb` deste repositório.
-2.  Abra no [Google Colab](https://colab.research.google.com/) e faça upload do arquivo.
-3.  Vá em **Ambiente de Execução** > **Executar tudo**.
-4.  **Importante:** Na última célula do código, cole seu token gratuito do Ngrok (pegue em [dashboard.ngrok.com](https://dashboard.ngrok.com)).
-5.  Clique no link gerado (`xxxx.ngrok-free.app`) para usar.
 
-**Você pode utilizar o meu token para rodar a aplicação que já está no projeto, mas queira pode substituir.**
+### **Método 1: Notebook Completo:**
+
+- Nesta opção, você roda o arquivo .ipynb original, visualizando todo o processo de código (carregamento de dados, treinamento) até chegar na aplicação.
+
+- Baixe o arquivo **Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb** deste repositório.
+
+- Acesse o Google Colab e faça o upload do arquivo.
+
+- No menu superior, vá em Ambiente de Execução > Executar tudo.
+
+- Role até a última célula. O código irá gerar um link público (ex: xxxx.ngrok-free.app ou similar).
+
+- Clique no link para abrir o sistema.
+
+**Nota:** Se o código pedir um token do Ngrok, você pode criar uma conta gratuita em ngrok.com e colar seu token.
+
+> **Importante:** Já tem configurado o meu token então mude se preferir.
+
+---
+
+### **Método 2: Execução Rápida (Apenas app.py):**
+
+- Nesta opção, você cria um ambiente limpo apenas para rodar a interface, sem passar pelos códigos de treinamento.
+
+- Abra um novo notebook em branco no Google Colab.
+
+- Na aba de arquivos (ícone de pasta à esquerda), faça o upload do arquivo app.py que está neste repositório.
+
+- **Copie e cole o código abaixo em uma célula e execute:**
+
+  ### Instala as dependências e o criador de túnel
+
+  ```bash
+  !pip install streamlit tensorflow pillow
+  ``` 
+  ```bash
+  !npm install localtunnel
+  ``` 
+
+  ### Roda a aplicação em segundo plano e gera o link de acesso
+  ```bash
+  import urllib
+  print("Senha para o túnel:", urllib.request.urlopen('https://ipv4.icanhazip.com').read().decode('utf8').strip("\n"))
+  !streamlit run app.py &> /content/logs.txt & npx localtunnel --port 8501
+  ``` 
+  - **Como acessar:**
+
+    - O código vai exibir um IP (ex: 34.123...) e um link (your url is: ...).
+
+    - Clique no link, cole o IP na caixa "Tunnel Password" e clique em Submit.
 
 ---
 
