@@ -73,7 +73,7 @@ Link: https://pet-identificador-de-racas.streamlit.app/
 
 ****
 
-### Opção 2: Google Colab 
+### Opção 2: Google Colab - Estudo Completo do Notebook (Aprofundado)
 Ideal para testar na nuvem, sem precisar instalar nada no seu computador. Escolha o método que preferir:
 
 - Nesta opção, você roda o arquivo .ipynb original, visualizando todo o processo de código (carregamento de dados, treinamento) até chegar na aplicação.
