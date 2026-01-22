@@ -24,7 +24,22 @@ O modelo foi treinado no **Oxford-IIIT Pet Dataset**.
 Abyssinian, Bengal, Birman, Bombay, British Shorthair, Egyptian Mau, Maine Coon, Persian, Ragdoll, Russian Blue, Siamese, Sphynx.
 
 **Cachorros:**
-American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihuahua, English Cocker Spaniel, English Setter, German Shorthaired, Great Pyrenees, Havanese, Japanese Chin, Keeshond, Leonberger, Miniature Pinscher, Newfoundland, Pomeranian, Pug, Saint Bernard, Samoyed, Scottish Terrier, Shiba Inu, Staffordshire Bull Terrier, Wheaten Terrier, Yorkshire Terrier.
+American Bulldog, American Pit Bull Terrier, Basset Hound, Beagle, Boxer, Chihuahua, English Cocker Spaniel, English Setter, German Shorthaired, Great Pyrenees, Havanese, Japanese Chin, Keeshond, Leonberger, Miniature Pinscher, Newfoundland, Pomeranian, Pug, Saint 
+Bernard, Samoyed, Scottish Terrier, Shiba Inu, Staffordshire Bull Terrier, Wheaten Terrier, Yorkshire Terrier.
+
+## 📂 Estrutura do Projeto
+
+Aqui está a organização dos arquivos no repositório:
+
+```text
+Identificador-Pets/
+│
+├── app.py                   # 🐍 O código principal do site (Frontend + Backend)
+├── modelo_racas_pro.tflite  # 🧠 O "cérebro" da IA (Modelo treinado e otimizado)
+├── requirements.txt         # 📦 Lista de bibliotecas para instalação
+├── Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb   # 📓 O notebook usado para treinar a IA (Google Colab)
+└── README.md                # 📄 Documentação e guia de uso
+```
 
 ## ℹ️ Informações sobre o Notebook
 
