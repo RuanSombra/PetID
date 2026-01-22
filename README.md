@@ -34,11 +34,11 @@ Aqui está a organização dos arquivos no repositório:
 ```text
 Identificador-Pets/
 │
-├── app.py                   # 🐍 O código principal do site (Frontend + Backend)
-├── modelo_racas_pro.tflite  # 🧠 O "cérebro" da IA (Modelo treinado e otimizado)
-├── requirements.txt         # 📦 Lista de bibliotecas para instalação
-├── Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb   # 📓 O notebook usado para treinar a IA (Google Colab)
-└── README.md                # 📄 Documentação e guia de uso
+├── app.py                   # O código principal do site (Frontend + Backend)
+├── modelo_racas_pro.tflite  # O "cérebro" da IA (Modelo treinado e otimizado)
+├── requirements.txt         # Lista de bibliotecas para instalação
+├── Aplicação_para_classificação_de_pets_(cachorro_e_gato).ipynb   # O notebook usado para treinar a IA (Google Colab)
+└── README.md                # Documentação e guia de uso
 ```
 
 ## ℹ️ Informações sobre o Notebook
